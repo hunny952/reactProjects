@@ -67,7 +67,7 @@ module.exports = {
       "lgi-9": "19.9px",
       "mid-1": "17.1px",
       "base-4": "15.4px",
-      "101xl": "120px",
+      "101xl": "115px",
       "29xl": "48px",
       "11xl": "30px",
       inherit: "inherit",

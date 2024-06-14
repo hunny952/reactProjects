@@ -103,11 +103,11 @@ const Cover = () => {
     <Box className="w-full relative bg-whitesmoke-400 overflow-hidden flex flex-col items-center justify-start pt-[76px] pb-5 pr-5 pl-[21px] box-border gap-[64px] leading-[normal] tracking-[normal] text-left text-101xl text-gray-200 font-space-grotesk mq750:gap-[32px] mq450:gap-[16px]">
       <Box className="w-[1519px] flex flex-row items-start justify-center py-0 pr-0.5 pl-0 box-border max-w-full">
         <Box className="flex flex-row items-start justify-start gap-[38px] max-w-full mq750:gap-[19px] mq1100:flex-wrap">
-          <b className="h-[162px] w-[287px] relative flex items-center min-w-[287px] mq750:text-29xl mq1100:flex-1 mq450:text-11xl">
-            Table
+          <b className="h-[162px] relative flex items-center min-w-[287px] mq750:text-29xl mq1100:flex-1 mq450:text-11xl">
+            Star Wars 
           </b>
           <Box className="h-[162px] w-[646px] relative font-medium text-lightslategray flex items-center min-w-[646px] max-w-full mq750:text-29xl mq750:min-w-full mq1100:flex-1 mq450:text-11xl">
-            Component
+          Characters
           </Box>
         </Box>
       </Box>
