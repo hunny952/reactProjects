@@ -1,9 +1,6 @@
 import React from "react";
-import { TableCell, TableRow, Box } from "@mui/material";
+import { TableCell, TableRow, Box, Chip } from "@mui/material";
 import Avatar from "./Avatar";
-import SkinColorChecks from "./SkinColorChecks";
-import Gender from "./Gender";
-import EyeColors from "./EyeColors";
 
 const nameColors = [
   "bg-darkturquoise",
@@ -16,18 +13,57 @@ const nameColors = [
   "bg-darkturquoise",
 ];
 
-const eyeColors = ["bg-oldlace", "bg-lavenderblush", "bg-mintcream"];
-const eyeText = ["text-indianred", "text-mediumaquamarine", "text-orange1"];
-
 function getRandomColorClass(lst) {
   const randomIndex = Math.floor(Math.random() * lst.length);
   return lst[randomIndex];
 }
 
+function getImgSrc(gender) {
+  let imgSrc = "/unknown.png";
+
+  if (gender === "female") {
+    imgSrc = "/wom.png";
+  }
+  if (gender === "male") {
+    imgSrc = "/man2.png";
+  }
+  return imgSrc;
+}
+
+const eyeColorStyles = {
+  backgroundColor: (eyeColor) => {
+    switch (eyeColor.toLowerCase()) {
+      case "blue":
+        return "#ADD8E6"; // Light Blue
+      case "brown":
+        return "rgba(247, 203, 127, 1)"; // Brown
+      case "red":
+        return "rgba(253, 224, 233, 1)"; // Red
+      case "yellow":
+        return "#FFFF00"; // Yellow
+      case "black":
+        return "rgba(156, 158, 159, 1)"; // Black
+      case "hazel":
+        return "#8E7618"; // Hazel
+      case "grey":
+        return "#808080"; // Grey
+      case "orange":
+        return "rgba(234, 144, 63, 1)"
+      default:
+        return "#D3D3D3"; // Default to Light Grey
+    }
+  },
+};
+
+const getEyeColorStyle = (eyeColor) => {
+  return {
+    backgroundColor: eyeColorStyles.backgroundColor(eyeColor),
+    color: "#000000", // Text color for contrast
+  };
+};
+
 const TableRows = ({ person }) => {
   const randomColorClass = getRandomColorClass(nameColors);
-  const eyeColor = getRandomColorClass(eyeColors);
-  const eyeTextClass = getRandomColorClass(eyeText);
 
   return (
     <TableRow>
@@ -52,7 +88,14 @@ const TableRows = ({ person }) => {
       <TableCell>
         <Box className="w-[155.2px] flex flex-col items-start justify-start pt-[7.1px] px-0 pb-0 box-border text-gray-300">
           <Box className="flex flex-row items-start justify-start gap-[8.5px]">
-            <SkinColorChecks person={person} colorClass={randomColorClass} />
+            <Box className="flex flex-col items-start justify-start pt-[8.5px] px-0 pb-0">
+              <Box
+                className={`w-2.5 h-2.5 relative rounded-[50%] ${randomColorClass} z-[1]`}
+              />
+            </Box>
+            <Box className="relative tracking-[0.02em] inline-block min-w-[91.1px] z-[1]">
+              {person.skin_color.toUpperCase()}
+            </Box>
           </Box>
         </Box>
       </TableCell>
@@ -60,17 +103,24 @@ const TableRows = ({ person }) => {
       <TableCell>
         <Box className="w-[98.3px] flex flex-col items-start justify-start pt-[9.2px] pb-0 pr-[21px] pl-0 box-border text-center text-mid-2 text-slategray">
           <Box className="self-stretch flex flex-row items-start justify-start gap-[5.7px]">
-            <Gender person={person} />
+            <img
+              className="h-[25.6px] w-[25.6px] relative overflow-hidden shrink-0 min-h-[26px] z-[1]"
+              loading="lazy"
+              alt=""
+              src={`${getImgSrc(person.gender)}`}
+            />
+
+            <Box className="flex-1 flex flex-col items-start justify-start pt-[2.2px] px-0 pb-0">
+              <Box className="self-stretch relative tracking-[0.02em] font-medium inline-block min-w-[45.5px] z-[1]">
+                {person.gender.toUpperCase()}
+              </Box>
+            </Box>
           </Box>
         </Box>
       </TableCell>
 
       <TableCell>
-        <EyeColors
-          person={person}
-          colorClass={eyeColor}
-          textClass={eyeTextClass}
-        />
+        <Chip label={person.eye_color.toUpperCase()} style={getEyeColorStyle(person.eye_color)} />
       </TableCell>
 
       <TableCell>
