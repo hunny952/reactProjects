@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableRow, Box } from "@mui/material";
+import { Table, TableBody, TableHead} from "@mui/material";
 import TableHeader from "./TableHeader";
 import TableRows from "./TableRows";
 
