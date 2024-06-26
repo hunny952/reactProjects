@@ -58,7 +58,7 @@ const TableRows = ({ person }) => {
       </TableCell>
 
       <TableCell>
-        <Box className="w-[98.3px] flex flex-col items-start justify-start pt-[9.2px] pb-0 pr-[21px] pl-0 box-border text-center text-mid-1 text-slategray">
+        <Box className="w-[98.3px] flex flex-col items-start justify-start pt-[9.2px] pb-0 pr-[21px] pl-0 box-border text-center text-mid-2 text-slategray">
           <Box className="self-stretch flex flex-row items-start justify-start gap-[5.7px]">
             <Gender person={person} />
           </Box>

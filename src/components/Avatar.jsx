@@ -23,7 +23,7 @@ const Avatar = ({ person, colorClass }) => {
     <>
       <Box className="flex flex-col items-start justify-end pt-0 px-0 pb-[5.7px]">
         <input
-          className="m-0 w-[25.6px] h-[25.6px] relative [filter:drop-shadow(0px_2.8px_5.69px_rgba(0,_28,_63,_0.21))] rounded-[7.11px] box-border z-[1] border-[1.4px] border-solid border-gainsboro"
+          className="m-0 w-[25.6px] h-[26.6px] relative top-[7px] [filter:drop-shadow(0px_2.8px_5.69px_rgba(0,_28,_63,_0.21))] rounded-[7.11px] box-border z-[1] border-[1.4px] border-solid border-gainsboro"
           type="checkbox"
         />
       </Box>

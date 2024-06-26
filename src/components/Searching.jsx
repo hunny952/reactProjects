@@ -12,7 +12,7 @@ const Searching = ({ className = "", handleSearchChange }) => {
       <div className="h-[78.3px] w-[1478.3px] relative rounded-[11.38px] bg-whitesmoke-100 hidden max-w-full" />
       <TextField
         className="[border:none] bg-[transparent] h-[49.8px] w-[483.8px] font-product-sans text-mid-1 text-gray-100 max-w-full z-[2]"
-        placeholder="Search for employees, salary amounts.."
+        placeholder="Search for names, gender hair color.."
         variant="outlined"
         onChange={handleInputChange}
         InputProps={{
