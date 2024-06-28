@@ -13,24 +13,24 @@ const Styledtableheadercell = styled(TableCell)({
 
 const TableHeader = ({ handleSort, getSortIcon }) => {
   const headerCells = [
-    "hair_color",
-    "skin_color",
-    "gender",
-    "eye_color",
-    "birth_year",
+    "Hair Color",
+    "Skin Color",
+    "Gender",
+    "Eye Color",
+    "Birth Year",
   ];
 
   const getHeaderCellClassName = (key) => {
     switch (key) {
-      case "hair_color":
+      case "Hair Color":
         return "relative tracking-[0.02em] font-medium inline-block min-w-[51.2px] z-[1]";
-      case "skin_color":
+      case "Skin Color":
         return "relative tracking-[0.02em] font-medium z-[1]";
-      case "eye_color":
+      case "Eye Color":
         return "relative tracking-[0.02em] font-medium inline-block min-w-[129.5px] z-[1]";
-      case "birth_year":
+      case "Birth Year":
         return "relative tracking-[0.02em] font-medium inline-block min-w-[56.9px] z-[1]";
-      case "gender":
+      case "Gender":
         return "relative tracking-[0.02em] font-medium inline-block min-w-[96.8px] z-[1]";
       default:
         return "w-32 bg-white";

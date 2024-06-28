@@ -112,7 +112,7 @@ const Cover = () => {
         </Box>
       </Box>
       <TableContainer component={Paper}>
-        <section className="w-[1518.2px] shadow-[0px_142.3px_113.83px_rgba(172,_175,_198,_0.07),_0px_59.4px_47.55px_rgba(172,_175,_198,_0.05),_0px_31.8px_25.42px_rgba(172,_175,_198,_0.04),_0px_17.8px_14.25px_rgba(172,_175,_198,_0.04),_0px_9.5px_7.57px_rgba(172,_175,_198,_0.03),_0px_3.9px_3.15px_rgba(172,_175,_198,_0.02)] rounded-[8.54px] bg-white box-border flex flex-col items-end justify-start pt-[18px] px-0 pb-[17px] gap-[12.8px] max-w-full text-left text-mid-1 text-darkgray font-helvetica-neue border-[1.4px] border-solid border-aliceblue">
+        <section className="w-[1518.2px] shadow-[0px_142.3px_113.83px_rgba(172,_175,_198,_0.07),_0px_59.4px_47.55px_rgba(172,_175,_198,_0.05),_0px_31.8px_25.42px_rgba(172,_175,_198,_0.04),_0px_17.8px_14.25px_rgba(172,_175,_198,_0.04),_0px_9.5px_7.57px_rgba(172,_175,_198,_0.03),_0px_3.9px_3.15px_rgba(172,_175,_198,_0.02)] rounded-[8.54px] bg-white box-border flex flex-col items-end justify-start pt-[18px] px-0 pb-[17px] gap-[12.8px] max-w-full text-left text-mid-1 text-darkgray font-helvetica-neue border-[1.4px] border-aliceblue">
           <Box className="self-stretch h-[885px] relative shadow-[0px_142.3px_113.83px_rgba(172,_175,_198,_0.07),_0px_59.4px_47.55px_rgba(172,_175,_198,_0.05),_0px_31.8px_25.42px_rgba(172,_175,_198,_0.04),_0px_17.8px_14.25px_rgba(172,_175,_198,_0.04),_0px_9.5px_7.57px_rgba(172,_175,_198,_0.03),_0px_3.9px_3.15px_rgba(172,_175,_198,_0.02)] rounded-[8.54px] bg-white box-border hidden border-[1.4px] border-solid border-aliceblue" />
           <img
             className="w-[1478.3px] relative max-h-full hidden max-w-full"
@@ -131,13 +131,13 @@ const Cover = () => {
           ) : (
             <Typography variant="body1">No data available.</Typography>
           )}
-          <Box
+        </section>
+
+        <Box
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "20px",
-              position: "relative",
-              right: "40rem",
+              backgroundColor: "white"
             }}
           >
             <Button
@@ -157,7 +157,7 @@ const Cover = () => {
               Next
             </Button>
           </Box>
-        </section>
+
       </TableContainer>
     </Box>
   );
