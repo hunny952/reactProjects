@@ -171,3 +171,102 @@
     object-fit: contain;
   }
   
+/* header component styling */
+
+.header-cell-box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 14.2px;
+}
+
+.header-cell-checkbox {
+  margin: 0;
+  height: 25.6px;
+  width: 25.6px;
+  position: relative;
+  top: 11px;
+  filter: drop-shadow(0px 2.8px 5.69px rgba(0, 28, 63, 0.21));
+  border-radius: 7.11px;
+  border: 1.4px solid gainsboro;
+}
+
+.header-cell-column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 2.9px;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.name-header-styling {
+  position: relative;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 81.1px;
+  z-index: 1;
+}
+
+.table-header-row {
+  display: table-row;
+}
+
+.table-header-cell {
+  font-family: system-ui;
+  font-size: 0.998rem;
+  line-height: 2.6rem;
+  border-bottom: 5px solid rgba(224, 224, 224, 1);
+  padding: 16px;
+  color: rgb(166, 165, 165);
+}
+
+.header-cell-default {
+  background-color: white;
+}
+
+.header-cell-hair-color {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 51.2px;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.header-cell-skin-color {
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.header-cell-eye-color {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 129.5px;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.header-cell-birth-year {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 56.9px;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+
+.header-cell-gender {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 96.8px;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
