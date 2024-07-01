@@ -1,22 +1,20 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-function getInitials(name) {
+const getInitials = (name) => {
   const nameArray = name.split(" ");
+  
   if (nameArray.length === 1) {
     // Single word name, return the first two letters
     return nameArray[0].substring(0, 2).toUpperCase();
   } else {
     // Multiple words, return the first letter of the first two words
-    const initials = nameArray
+    return nameArray
       .slice(0, 2)
       .map((part) => part.charAt(0).toUpperCase())
       .join("");
-    return initials.length === 1
-      ? nameArray[0].substring(0, 2).toUpperCase()
-      : initials;
   }
-}
+};
 
 const Avatar = ({ person, colorClass }) => {
   return (

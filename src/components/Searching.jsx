@@ -1,4 +1,4 @@
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 
 const Searching = ({ className = "", handleSearchChange }) => {
   const handleInputChange = (event) => {
@@ -6,10 +6,10 @@ const Searching = ({ className = "", handleSearchChange }) => {
   };
 
   return (
-    <div
+    <Box
       className={`flex-1 rounded-[11.38px] bg-whitesmoke-100 flex flex-row items-end justify-between pt-[14.2px] pb-[14.3px] pr-4 pl-3.5 box-border max-w-full gap-[20px] z-[1] mq1100:flex-wrap ${className}`}
     >
-      <div className="h-[78.3px] w-[1478.3px] relative rounded-[11.38px] bg-whitesmoke-100 hidden max-w-full" />
+      <Box className="h-[78.3px] w-[1478.3px] relative rounded-[11.38px] bg-whitesmoke-100 hidden max-w-full" />
       <TextField
         className="[border:none] bg-[transparent] h-[49.8px] w-[483.8px] font-product-sans text-mid-1 text-gray-100 max-w-full z-[2]"
         placeholder="Search for names, gender hair color.."
@@ -33,8 +33,8 @@ const Searching = ({ className = "", handleSearchChange }) => {
           width: "483.8px",
         }}
       />
-      <div className="h-[48.3px] w-[200.6px] flex flex-col items-start justify-end pt-0 px-0 pb-[1.3px] box-border">
-        <div className="self-stretch flex-1 flex flex-row items-start justify-start gap-[12.8px] z-[2]">
+      <Box className="h-[48.3px] w-[200.6px] flex flex-col items-start justify-end pt-0 px-0 pb-[1.3px] box-border">
+        <Box className="self-stretch flex-1 flex flex-row items-start justify-start gap-[12.8px] z-[2]">
           <Button
             className="self-stretch flex-1 shadow-[0px_4.3px_5.69px_-1.42px_rgba(0,_39,_58,_0.03)]"
             startIcon={<img width="25.6px" height="25.6px" src="/filter.svg" />}
@@ -51,19 +51,19 @@ const Searching = ({ className = "", handleSearchChange }) => {
           >
             Filters
           </Button>
-          <div className="w-[48.4px] shadow-[0px_4.3px_5.69px_-1.42px_rgba(0,_39,_58,_0.03)] rounded-[8.54px] bg-white box-border overflow-hidden shrink-0 flex flex-col items-center justify-center pt-[9px] px-2.5 pb-2 border-[1.4px] border-solid border-whitesmoke-300">
-            <div className="flex flex-row items-center justify-center">
+          <Box className="w-[48.4px] shadow-[0px_4.3px_5.69px_-1.42px_rgba(0,_39,_58,_0.03)] rounded-[8.54px] bg-white box-border overflow-hidden shrink-0 flex flex-col items-center justify-center pt-[9px] px-2.5 pb-2 border-[1.4px] border-solid border-whitesmoke-300">
+            <Box className="flex flex-row items-center justify-center">
               <img
                 className="h-[25.6px] w-[25.6px] relative overflow-hidden shrink-0 object-contain"
                 loading="lazy"
                 alt=""
                 src="/morehorizontal@2x.png"
               />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
