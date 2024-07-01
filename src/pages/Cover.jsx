@@ -17,23 +17,25 @@ const Cover = () => {
     direction: "asc",
   });
 
+  const fetchPeopleData = async (page) => {
+    try {
+      const response = await axios.get(
+        `https://swapi.dev/api/people/?page=${page}`
+      );
+      setPeopleData(response.data.results);
+      setNextPage(response.data.next);
+      setPrevPage(response.data.previous);
+    } catch (error) {
+      setError("Error fetching data.");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchPeopleData = async () => {
-      try {
-        const response = await axios.get(
-          `https://swapi.dev/api/people/?page=${currentPage}`
-        );
-        setPeopleData(response.data.results);
-        setNextPage(response.data.next);
-        setPrevPage(response.data.previous);
-      } catch (error) {
-        setError("Error fetching data.");
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPeopleData();
+    setLoading(true);
+    fetchPeopleData(currentPage);
   }, [currentPage]);
 
   const handlePageChange = (page) => {

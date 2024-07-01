@@ -13,12 +13,12 @@ const nameColors = [
   "bg-darkturquoise",
 ];
 
-function getRandomColorClass(lst) {
+const getRandomColorClass = (lst) => {
   const randomIndex = Math.floor(Math.random() * lst.length);
   return lst[randomIndex];
-}
+};
 
-function getImgSrc(gender) {
+const getImgSrc = (gender) => {
   let imgSrc = "/unknown.png";
 
   if (gender === "female") {
@@ -28,7 +28,7 @@ function getImgSrc(gender) {
     imgSrc = "/man2.png";
   }
   return imgSrc;
-}
+};
 
 const eyeColorStyles = {
   backgroundColor: (eyeColor) => {
