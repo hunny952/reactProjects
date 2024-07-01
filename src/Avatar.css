@@ -1,3 +1,5 @@
+/* avatar component styling */
+
 .avatar-container {
     display: flex;
     flex-direction: column;
@@ -70,5 +72,102 @@
     letter-spacing: 0.02em;
     font-weight: 500;
     flex-shrink: 0;
+  }
+
+/* searching component styling */
+
+  .searching-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    padding-top: 14.3px;
+    padding-bottom: 14.3px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 11.38px;
+    background-color: #f8fafb;
+    max-width: 100%;
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .searching-background {
+    height: 78.3px;
+    width: 1478.3px;
+    border-radius: 11.38px;
+    background-color: #f8fafb;
+    max-width: 100%;
+    display: none;
+  }
+  
+  .searching-textfield {
+    border: none;
+    background: transparent;
+    height: 49.8px;
+    width: 483.8px;
+    font-family: 'Product Sans', sans-serif;
+    color: #b0b0b0;
+    max-width: 100%;
+    z-index: 2;
+  }
+  
+  .searching-button-container {
+    height: 48.3px;
+    width: 200.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding-top: 0;
+    padding-bottom: 1.3px;
+  }
+  
+  .searching-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 12.8px;
+    z-index: 2;
+  }
+  
+  .searching-filter-button {
+    flex: 1;
+    position: relative;
+    left: 35px;
+    padding: 9px 22px;
+    box-shadow: 0px 4.3px 5.69px -1.42px rgba(0, 39, 58, 0.03);
+  }
+  
+  .searching-more-button-container {
+    width: 40.4px;
+    box-shadow: 0px 4.3px 5.69px -1.42px rgba(0, 39, 58, 0.03);
+    border-radius: 8.54px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 2px;
+    position: relative;
+    left: 30px;
+    height: 45px;
+    border: 1.4px solid #f5f5f5;
+  }
+  
+  .searching-more-button {
+    height: 25.6px;
+    width: 25.6px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
   }
   
