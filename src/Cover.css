@@ -59,6 +59,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    left: 85px;
     min-width: 287px;
   }
   
@@ -84,6 +85,7 @@
     align-items: center;
     min-width: 646px;
     max-width: 100%;
+    left: 78px;
   }
   
   .cover-subtitle.mq750 {

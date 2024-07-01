@@ -50,6 +50,7 @@ const TableHeader = ({ handleSort, getSortIcon }) => {
             <Box
               onClick={() => handleSort("name")}
               className="name-header-styling"
+              style={{ cursor: "pointer" }}  
             >
               Name {getSortIcon("name")}
             </Box>
@@ -64,7 +65,7 @@ const TableHeader = ({ handleSort, getSortIcon }) => {
           className={`${getHeaderCellClassName(key)}`}
           style={{ cursor: "pointer" }}
           >
-            {key.charAt(0).toUpperCase() + key.slice(1)} {getSortIcon(key)}
+            {label} {getSortIcon(key)}
         </Box>
         </Styledtableheadercell>
       ))}

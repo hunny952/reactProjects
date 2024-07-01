@@ -1,6 +1,7 @@
 import React from "react";
 import { TableCell, TableRow, Box, Chip } from "@mui/material";
 import Avatar from "./Avatar";
+import "../Components.css";
 
 const nameColors = [
   "bg-darkturquoise",
@@ -69,34 +70,30 @@ const TableRows = ({ person }) => {
   const randomColorClass = getRandomColorClass(nameColors);
 
   return (
-    <TableRow>
+    <TableRow className="table-row">
       <TableCell>
-        <Box className="flex-1 flex flex-row items-start justify-between max-w-full gap-[20px] mq1275:flex-wrap">
-          <Box className="flex flex-row items-end justify-start py-0 pr-7 pl-0 gap-[14.2px] text-center text-base-4 text-white">
-            <Box className="flex flex-row items-start justify-start gap-[8.6px] z-[1]">
-              <Avatar person={person} colorClass={randomColorClass} />
-            </Box>
+        <Box className="avatar-container">
+          <Box className="avatar-subcontainer">
+            <Avatar person={person} colorClass={randomColorClass} />
           </Box>
         </Box>
       </TableCell>
 
       <TableCell>
-        <Box className="flex flex-col items-start justify-start pt-[7.1px] px-0 pb-0">
-          <Box className="relative tracking-[0.02em] inline-block min-w-[121px] whitespace-nowrap z-[1]">
+        <Box className="hair-color">
+          <Box className="hair-color-subcontainer">
             {person.hair_color.toUpperCase()}
           </Box>
         </Box>
       </TableCell>
 
       <TableCell>
-        <Box className="w-[155.2px] flex flex-col items-start justify-start pt-[7.1px] px-0 pb-0 box-border text-gray-300">
-          <Box className="flex flex-row items-start justify-start gap-[8.5px]">
-            <Box className="flex flex-col items-start justify-start pt-[8.5px] px-0 pb-0">
-              <Box
-                className={`w-2.5 h-2.5 relative rounded-[50%] ${randomColorClass} z-[1]`}
-              />
+        <Box className="skin-color">
+          <Box className="skin-color-container">
+            <Box className="skin-color-circle-wrapper">
+              <Box className={`skin-color-circle ${randomColorClass}`} />
             </Box>
-            <Box className="relative tracking-[0.02em] inline-block min-w-[91.1px] z-[1]">
+            <Box className="skin-color-sub-container">
               {person.skin_color.toUpperCase()}
             </Box>
           </Box>
@@ -104,17 +101,17 @@ const TableRows = ({ person }) => {
       </TableCell>
 
       <TableCell>
-        <Box className="w-[98.3px] flex flex-col items-start justify-start pt-[9.2px] pb-0 pr-[21px] pl-0 box-border text-center text-mid-2 text-slategray">
-          <Box className="self-stretch flex flex-row items-start justify-start gap-[5.7px]">
+        <Box className="gender">
+          <Box className="gender-container">
             <img
-              className="h-[25.6px] w-[25.6px] relative overflow-hidden shrink-0 min-h-[26px] z-[1]"
+              className="gender-icon"
               loading="lazy"
               alt=""
               src={`${getImgSrc(person.gender)}`}
             />
 
-            <Box className="flex-1 flex flex-col items-start justify-start pt-[2.2px] px-0 pb-0">
-              <Box className="self-stretch relative tracking-[0.02em] font-medium inline-block min-w-[45.5px] z-[1]">
+            <Box className="gender-text-container">
+              <Box className="gender-text">
                 {person.gender.toUpperCase()}
               </Box>
             </Box>
@@ -123,12 +120,16 @@ const TableRows = ({ person }) => {
       </TableCell>
 
       <TableCell>
-        <Chip label={person.eye_color.toUpperCase()} style={getEyeColorStyle(person.eye_color)} />
+        <Chip
+          label={person.eye_color.toUpperCase()}
+          style={getEyeColorStyle(person.eye_color)}
+          className="eye-color-chip"
+        />
       </TableCell>
 
       <TableCell>
-        <Box className="flex flex-col items-start justify-start pt-[7.1px] px-0 pb-0">
-          <Box className="relative tracking-[0.02em] z-[1]">
+        <Box className="birth-year">
+          <Box className="birth-year-sub">
             {person.birth_year}
           </Box>
         </Box>

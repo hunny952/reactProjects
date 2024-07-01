@@ -270,3 +270,164 @@
   letter-spacing: 0.02em;
   z-index: 1;
 }
+
+
+/* table rows component styling */
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: between;
+  max-width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.avatar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: start;
+  padding-right: 7px;
+  gap: 14.2px;
+  text-align: center;
+  color: var(--base-4);
+}
+
+.avatar-subcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 8.6px;
+  z-index: 1;
+}
+
+.hair-color {
+  padding-top: 7.1px;
+  display: inline-block;
+  min-width: 121px;
+  white-space: nowrap;
+}
+
+.skin-color {
+  width: 155.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 7.1px;
+  color: var(--gray-300);
+}
+
+.skin-color-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 8.5px;
+}
+
+.skin-color-circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 8.5px;
+}
+
+.skin-color-circle {
+  width: 9.5px;
+  height: 9.5px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  bottom: 4px;
+}
+
+.skin-color-sub-container {
+  position: relative;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  min-width: 91.1px;
+  z-index: 1;
+}
+
+.gender {
+  width: 98.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 9.2px;
+  padding-right: 21px;
+  text-align: center;
+  color: var(--mid-2);
+}
+
+.gender-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 5.7px;
+}
+
+.gender-icon {
+  height: 25.6px;
+  width: 25.6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gender-text {
+  display: inline-block;
+  min-width: 45.5px;
+  font-weight: medium;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+}
+
+.gender-text-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 2.2px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.eye-color {
+  padding-top: 7.1px;
+  display: inline-block;
+}
+
+.birth-year {
+  padding-top: 7.1px;
+  display: inline-block;
+}
+
+.birth-year-sub{
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+}
+
+.eye-color-chip {
+  background-color: #d3d3d3;
+  color: #000000;
+}
+
+.hair-color-subcontainer {
+  position: relative;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  min-width: 121px;
+  white-space: nowrap;
+  z-index: 1;
+}
