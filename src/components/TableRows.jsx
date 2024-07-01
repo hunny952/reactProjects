@@ -19,13 +19,16 @@ const getRandomColorClass = (lst) => {
 };
 
 const getImgSrc = (gender) => {
-  let imgSrc = "/unknown.png";
-
-  if (gender === "female") {
-    imgSrc = "/wom.png";
-  }
-  if (gender === "male") {
-    imgSrc = "/man2.png";
+  let imgSrc;
+  switch (gender) {
+    case "female":
+      imgSrc = "/wom.png";
+      break;
+    case "male":
+      imgSrc = "/man2.png";
+      break;
+    default:
+      imgSrc = "/unknown.png";
   }
   return imgSrc;
 };
