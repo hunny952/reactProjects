@@ -1,0 +1,74 @@
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5.7px;
+  }
+  
+  .avatar-checkbox {
+    margin: 0;
+    width: 25.6px;
+    height: 26.6px;
+    position: relative;
+    top: 7px;
+    filter: drop-shadow(0px 2.8px 5.69px rgba(0, 28, 63, 0.21));
+    border-radius: 7.11px;
+    box-sizing: border-box;
+    z-index: 1;
+    border: 1.4px solid gainsboro;
+  }
+  
+  .avatar-image-container {
+    height: 38.4px;
+    width: 38.4px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  
+  .avatar-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .avatar-initials {
+    position: absolute;
+    top: 10.2px;
+    left: 9.4px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    display: inline-block;
+    width: 20.5px;
+    height: 19.2px;
+    min-width: 20.5px;
+    z-index: 1;
+  }
+  
+  .avatar-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-top: 7.2px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #2f4f4f;
+  }
+  
+  .avatar-name {
+    position: relative;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Box, Button, Typography, TableContainer, Paper } from "@mui/material";
 import TableComponent from "../components/TableComponent";
 import Searching from "../components/Searching";
+import "../Cover.css";
 
 const Cover = () => {
   const [peopleData, setPeopleData] = useState([]);
@@ -102,26 +103,20 @@ const Cover = () => {
   }
 
   return (
-    <Box className="w-full relative bg-whitesmoke-400 overflow-hidden flex flex-col items-center justify-start pt-[76px] pb-5 pr-5 pl-[21px] box-border gap-[64px] leading-[normal] tracking-[normal] text-left text-101xl text-gray-200 font-space-grotesk mq750:gap-[32px] mq450:gap-[16px]">
-      <Box className="w-[1519px] flex flex-row items-start justify-center py-0 pr-0.5 pl-0 box-border max-w-full">
-        <Box className="flex flex-row items-start justify-start gap-[38px] max-w-full mq750:gap-[19px] mq1100:flex-wrap">
-          <b className="h-[162px] relative flex items-center min-w-[287px] mq750:text-29xl mq1100:flex-1 mq450:text-11xl">
-            Star Wars 
+    <Box className="cover-container">
+      <Box className="cover-header">
+        <Box className="cover-header-text">
+          <b className="cover-title">
+            Star Wars
           </b>
-          <Box className="h-[162px] w-[646px] relative font-medium text-lightslategray flex items-center min-w-[646px] max-w-full mq750:text-29xl mq750:min-w-full mq1100:flex-1 mq450:text-11xl">
-          Characters
+          <Box className="cover-subtitle">
+            Characters
           </Box>
         </Box>
       </Box>
       <TableContainer component={Paper}>
-        <section className="w-[1518.2px] shadow-[0px_142.3px_113.83px_rgba(172,_175,_198,_0.07),_0px_59.4px_47.55px_rgba(172,_175,_198,_0.05),_0px_31.8px_25.42px_rgba(172,_175,_198,_0.04),_0px_17.8px_14.25px_rgba(172,_175,_198,_0.04),_0px_9.5px_7.57px_rgba(172,_175,_198,_0.03),_0px_3.9px_3.15px_rgba(172,_175,_198,_0.02)] rounded-[8.54px] bg-white box-border flex flex-col items-end justify-start pt-[18px] px-0 pb-[17px] gap-[12.8px] max-w-full text-left text-mid-1 text-darkgray font-helvetica-neue border-[1.4px] border-aliceblue">
-          <Box className="self-stretch h-[885px] relative shadow-[0px_142.3px_113.83px_rgba(172,_175,_198,_0.07),_0px_59.4px_47.55px_rgba(172,_175,_198,_0.05),_0px_31.8px_25.42px_rgba(172,_175,_198,_0.04),_0px_17.8px_14.25px_rgba(172,_175,_198,_0.04),_0px_9.5px_7.57px_rgba(172,_175,_198,_0.03),_0px_3.9px_3.15px_rgba(172,_175,_198,_0.02)] rounded-[8.54px] bg-white box-border hidden border-[1.4px] border-solid border-aliceblue" />
-          <img
-            className="w-[1478.3px] relative max-h-full hidden max-w-full"
-            alt=""
-            src="/vector-2.svg"
-          />
-          <Box className="self-stretch flex flex-row items-start justify-end py-0 px-5 box-border max-w-full">
+        <section className="cover-section">
+          <Box className="search-container">
             <Searching handleSearchChange={handleSearchChange} />
           </Box>
           {sortedPeople && sortedPeople.length > 0 ? (
@@ -135,31 +130,24 @@ const Cover = () => {
           )}
         </section>
 
-        <Box
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: "white"
-            }}
+        <Box className="cover-buttons">
+          <Button
+            variant="contained"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={!prevPage}
+            style={{ marginRight: "10px", marginBottom: "10px" }}
           >
-            <Button
-              variant="contained"
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={!prevPage}
-              style={{ marginRight: "10px", marginBottom: "10px" }}
-            >
-              Previous
-            </Button>
-            <Button
-              variant="contained"
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={!nextPage}
-              style={{ marginBottom: "10px" }}
-            >
-              Next
-            </Button>
-          </Box>
-
+            Previous
+          </Button>
+          <Button
+            variant="contained"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={!nextPage}
+            style={{ marginBottom: "10px" }}
+          >
+            Next
+          </Button>
+        </Box>
       </TableContainer>
     </Box>
   );
