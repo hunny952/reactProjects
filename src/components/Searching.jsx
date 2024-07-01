@@ -1,5 +1,5 @@
 import { TextField, Button, Box } from "@mui/material";
-import "../Avatar.css";
+import "../Components.css";
 
 const Searching = ({ className = "", handleSearchChange }) => {
   const handleInputChange = (event) => {
