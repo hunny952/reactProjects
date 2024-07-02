@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import "../Components.css";
 
 const getInitials = (name) => {
@@ -21,7 +21,7 @@ const Avatar = ({ person, colorClass }) => {
   return (
     <>
       <Box className="avatar-container">
-        <input
+        <TextField
           className="avatar-checkbox"
           type="checkbox"
         />
