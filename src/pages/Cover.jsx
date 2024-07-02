@@ -264,7 +264,7 @@ const Cover = () => {
     <Box className="cover-container">
       <Box className="cover-header">
         <Box className="cover-header-text">
-          <b className="cover-title">Star Wars</b>
+          <Box className="cover-title">Star Wars</Box>
           <Box className="cover-subtitle">Characters</Box>
         </Box>
       </Box>
