@@ -5,10 +5,9 @@ import "../Components.css";
 const getInitials = (name) => {
   const nameArray = name.split(" ");
   return nameArray
-  .slice(0, 2)
-  .map((part, index) => (index === 0 && nameArray.length === 1 ? part.substring(0, 2) : part.charAt(0)))
-  .join("")
-  .toUpperCase();
+    .slice(0, 2)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join("");
 };
 
 const Avatar = ({ person, colorClass }) => {

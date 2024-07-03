@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Box, Button, Typography, TableContainer, Paper } from "@mui/material";
-import DataTable from "../components/DataTable";
-import SearchToolbar from "../components/SearchToolbar";
+import DataTable from "./DataTable";
+import SearchToolbar from "./SearchToolbar";
 import "../Cover.css";
 
-const Cover = () => {
+const Main = () => {
   const [peopleData, setPeopleData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -164,4 +164,4 @@ const Cover = () => {
   );
 };
 
-export default Cover;
+export default Main;

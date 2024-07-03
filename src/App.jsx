@@ -5,7 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import Cover from "./pages/Cover";
+import Main from "./components/Main";
 
 function App() {
   const action = useNavigationType();
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Cover />} />
+      <Route path="/" element={<Main />} />
     </Routes>
   );
 }
