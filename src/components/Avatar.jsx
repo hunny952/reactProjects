@@ -3,18 +3,13 @@ import { Box, TextField } from "@mui/material";
 import "../Components.css";
 
 const getInitials = (name) => {
-  if (!name) return ""; // Handle empty string case
-
-  const nameArray = name.trim().split(/\s+/);
-
-  if (nameArray.length === 1) {
-    // Single word name, return the first two letters
-    return nameArray[0].substring(0, 2).toUpperCase();
-  } else {
-    // Multiple words, return the first letter of the first two words
-    const [firstName, secondName] = nameArray;
-    return `${firstName.charAt(0)}${secondName.charAt(0)}`.toUpperCase();
-  }
+  const nameArray = name.split(" ");
+  return nameArray
+  .slice(0, 2)
+  .map((part, index) => (index === 0 && nameArray.length === 1 ? part.substring(0, 2) : part.charAt(0)))
+  .join("")
+  .toUpperCase();
+  
 };
 
 const Avatar = ({ person, colorClass }) => {
