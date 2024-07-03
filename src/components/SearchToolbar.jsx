@@ -1,7 +1,7 @@
 import { TextField, Button, Box } from "@mui/material";
 import "../Components.css";
 
-const Searching = ({ className = "", handleSearchChange }) => {
+const SearchToolbar = ({ className = "", handleSearchChange }) => {
   const handleInputChange = (event) => {
     handleSearchChange(event.target.value);
   };
@@ -66,4 +66,4 @@ const Searching = ({ className = "", handleSearchChange }) => {
   );
 };
 
-export default Searching;
+export default SearchToolbar;

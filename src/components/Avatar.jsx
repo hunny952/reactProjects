@@ -9,7 +9,6 @@ const getInitials = (name) => {
   .map((part, index) => (index === 0 && nameArray.length === 1 ? part.substring(0, 2) : part.charAt(0)))
   .join("")
   .toUpperCase();
-  
 };
 
 const Avatar = ({ person, colorClass }) => {

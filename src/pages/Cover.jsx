@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Box, Button, Typography, TableContainer, Paper } from "@mui/material";
-import TableComponent from "../components/table";
-import Searching from "../components/searchToolbar";
+import DataTable from "../components/DataTable";
+import SearchToolbar from "../components/SearchToolbar";
 import "../Cover.css";
 
 const Cover = () => {
@@ -117,10 +117,10 @@ const Cover = () => {
       <TableContainer component={Paper}>
         <section className="cover-section">
           <Box className="search-container">
-            <Searching handleSearchChange={handleSearchChange} />
+            <SearchToolbar handleSearchChange={handleSearchChange} />
           </Box>
           {sortedPeople && sortedPeople.length > 0 ? (
-            <TableComponent
+            <DataTable
               sortedPeople={sortedPeople}
               handleSort={handleSort}
               getSortIcon={getSortIcon}

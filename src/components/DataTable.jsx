@@ -15,7 +15,7 @@ const StyledTableHeaderCell = styled(TableCell)({
 });
 
 
-const TableComponent = ({ sortedPeople, handleSort, getSortIcon }) => {
+const DataTable = ({ sortedPeople, handleSort, getSortIcon }) => {
   const headerCells = [
     { key: "name", label: "Name" },
     { key: "hair_color", label: "Hair Color" },
@@ -56,4 +56,4 @@ const TableComponent = ({ sortedPeople, handleSort, getSortIcon }) => {
   );
 };
 
-export default TableComponent;
+export default DataTable;
