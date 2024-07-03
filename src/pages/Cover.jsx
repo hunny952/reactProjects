@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Box, Button, Typography, TableContainer, Paper } from "@mui/material";
-import TableComponent from "../components/TableComponent";
-import Searching from "../components/Searching";
+import TableComponent from "../components/table";
+import Searching from "../components/searchToolbar";
 import "../Cover.css";
 
 const Cover = () => {
   const [peopleData, setPeopleData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [nextPage, setNextPage] = useState(null);
-  const [prevPage, setPrevPage] = useState(null);
+  const [pagination, setPagination] = useState({ next: null, prev: null });
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [totalItems, setTotalItems] = useState(0); 
@@ -26,8 +25,7 @@ const Cover = () => {
       );
       setPeopleData(response.data.results);
       setTotalItems(response.data.count); // Set total number of items
-      setNextPage(response.data.next);
-      setPrevPage(response.data.previous);
+      setPagination({ next: response.data.next, prev: response.data.previous });
     } catch (error) {
       setError("Error fetching data.");
       console.error(error);
@@ -141,7 +139,7 @@ const Cover = () => {
           <Button
             variant="contained"
             onClick={() => handlePageChange(currentPage - 1)}
-            disabled={!prevPage}
+            disabled={!pagination.prev}
             style={{ marginRight: "10px", marginBottom: "5px" }}
           >
             Previous
@@ -149,7 +147,7 @@ const Cover = () => {
           <Button
             variant="contained"
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={!nextPage}
+            disabled={!pagination.next}
             style={{ marginBottom: "5px" }}
           >
             Next
