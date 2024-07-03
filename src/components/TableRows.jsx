@@ -62,6 +62,8 @@ const eyeColorStyles = {
 const getEyeColorStyle = (eyeColor) => {
   return {
     backgroundColor: eyeColorStyles.backgroundColor(eyeColor),
+    position: "relative",
+    top: "5px",
     color: "#000000", // Text color for contrast
   };
 };
