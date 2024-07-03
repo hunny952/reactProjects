@@ -62,13 +62,10 @@ const Cover = () => {
     let aValue = a[sortConfig.key];
     let bValue = b[sortConfig.key];
 
-    if (!isNaN(aValue) && !isNaN(bValue)) {
-      aValue = Number(aValue);
-      bValue = Number(bValue);
+    if (typeof aValue === "string") {
+      aValue = aValue.toLowerCase();
+      bValue = bValue.toLowerCase();
     }
-
-    if (Array.isArray(aValue)) aValue = aValue.join(", ");
-    if (Array.isArray(bValue)) bValue = bValue.join(", ");
 
     if (aValue < bValue) {
       return sortConfig.direction === "asc" ? -1 : 1;
