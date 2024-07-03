@@ -3,7 +3,7 @@ import axios from "axios";
 import { Box, Button, Typography, TableContainer, Paper } from "@mui/material";
 import DataTable from "./DataTable";
 import SearchToolbar from "./SearchToolbar";
-import "../Cover.css";
+import "../Main.css";
 
 const Main = () => {
   const [peopleData, setPeopleData] = useState([]);
